@@ -2,7 +2,9 @@ programa {
   funcao inicio() {
     inteiro opcao=99,toboga = 99, ondas = 99, lanchonete = 99
     real conta=0.0
-    logico Onda=falso,tropical=falso,queda=falso,abismo=falso,suave=falso,media=falso,forte=falso,turbular=falso,hamburguer=falso,pizza=falso,sorvete=falso,refrigerante=falso
+    logico Onda=falso,tropical=falso,queda=falso,abismo=falso
+    logico suave=falso,media=falso,forte=falso,turbular=falso
+    logico hamburguer=falso,pizza=falso,sorvete=falso,refrigerante=falso
 
    enquanto(opcao != 0){
    escreva("\n----Parque Aquático----" )
@@ -97,7 +99,6 @@ programa {
   			  		pare
   			  		caso contrario: 
   			  		escreva("Opção inválida")
-  			  		
 				}
 				}
 				caso 3:
@@ -112,7 +113,6 @@ programa {
    						leia(lanchonete)
 
    						escolha(lanchonete){
-
    							caso 1: 
 							escreva("Você escolheu Hambúrguer!\n")
   			  				escreva("Custo:R$8\n")
@@ -140,10 +140,7 @@ programa {
   			  				caso contrario: 
   			  				escreva("Opção inválida")
    						}
-  			  				
-						
 						}
-					
 				}
     }
 			escreva("\n---Intens Comprados---\n")
@@ -174,17 +171,14 @@ programa {
 				se(refrigerante== verdadeiro){
 					escreva("Refrigerante / Custo:R$5\n")}
 				escreva("O total da compra é de:R$ ",conta,"\n")
-    
 		  }	
   }
-
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3212; 
+ * @POSICAO-CURSOR = 5350; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
