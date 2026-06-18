@@ -1,8 +1,8 @@
 programa {
   funcao inicio() {
-    inteiro opcao=99,toboga = 99, ondas = 99
+    inteiro opcao=99,toboga = 99, ondas = 99, lanchonete = 99
     real conta=0.0
-    logico Onda=falso,tropical=falso,queda=falso,abismo=falso,suave=falso,media=falso,forte=falso,turbular=falso
+    logico Onda=falso,tropical=falso,queda=falso,abismo=falso,suave=falso,media=falso,forte=falso,turbular=falso,hamburguer=falso,pizza=falso,sorvete=falso,refrigerante=falso
 
    enquanto(opcao != 0){
    escreva("\n----Parque Aquático----" )
@@ -97,12 +97,56 @@ programa {
   			  		pare
   			  		caso contrario: 
   			  		escreva("Opção inválida")
+  			  		
 				}
-					}
+				}
+				caso 3:
+					enquanto(lanchonete != 0){
+						escreva("\n----Lanchonete----"   )
+   						escreva("\n1 - Hambúrguer"            )
+   						escreva("\n2 - Pizza"                 )
+   						escreva("\n3 - Sorvete"               )
+   						escreva("\n4 - Refrigerante"          )
+   						escreva("\n0 - Sair"                  )
+   						escreva("\nEscolha uma opção: "       )
+   						leia(lanchonete)
+
+   						escolha(lanchonete){
+
+   							caso 1: 
+							escreva("Você escolheu Hambúrguer!\n")
+  			  				escreva("Custo:R$8\n")
+  			  				conta=conta+8
+  			  				hamburguer=verdadeiro
+  			  				pare
+  			  				caso 2: 
+							escreva("Você escolheu Pizza!\n")
+  			  				escreva("Custo:R$15\n")
+  			  				conta=conta+15
+  			  				pizza=verdadeiro
+  			  				pare
+  			  				caso 3: 
+							escreva("Você escolheu Sorvete!\n")
+  			  				escreva("Custo:R$10\n")
+  			  				conta=conta+10
+  			  				sorvete=verdadeiro
+  			  				pare
+  			  				caso 4: 
+							escreva("Você escolheu Refrigerante!\n")
+  			  				escreva("Custo:R$5\n")
+  			  				conta=conta+5
+  			  				refrigerante=verdadeiro
+  			  				pare
+  			  				caso contrario: 
+  			  				escreva("Opção inválida")
+   						}
+  			  				
+						
+						}
 					
 				}
     }
-			escreva("---Intens Comprados---\n")
+			escreva("\n---Intens Comprados---\n")
 				se(Onda == verdadeiro){
 					escreva("Onda azul / Custo:R$8\n")}
 				se(tropical == verdadeiro){
@@ -112,7 +156,7 @@ programa {
 				se(abismo == verdadeiro){
 					escreva("Abismo Extremo / Custo:R$19\n")}
 
-					se(suave == verdadeiro){
+				se(suave == verdadeiro){
 					escreva("Onda Suave / Custo:R$8\n")}
 				se(media== verdadeiro){
 					escreva("Onda Média / Custo:R$12\n")}
@@ -120,6 +164,15 @@ programa {
 					escreva("Onda Forte / Custo:R$15\n")}
 				se(turbular== verdadeiro){
 					escreva("Onda Turbular / Custo:R$19\n")}
+
+				se(hamburguer == verdadeiro){
+					escreva("Hambúrguer / Custo:R$8\n")}
+				se(pizza== verdadeiro){
+					escreva("Pizza / Custo:R$15\n")}
+				se(sorvete == verdadeiro){
+					escreva("Sorvete / Custo:R$10\n")}
+				se(refrigerante== verdadeiro){
+					escreva("Refrigerante / Custo:R$5\n")}
 				escreva("O total da compra é de:R$ ",conta,"\n")
     
 		  }	
@@ -131,7 +184,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3671; 
+ * @POSICAO-CURSOR = 3212; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
