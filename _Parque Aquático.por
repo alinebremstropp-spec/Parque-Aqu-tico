@@ -1,8 +1,8 @@
 programa {
   funcao inicio() {
-    inteiro opcao=99,toboga = 99
+    inteiro opcao=99,toboga = 99, ondas = 99
     real conta=0.0
-    logico Onda=falso,tropical=falso,queda=falso,abismo=falso
+    logico Onda=falso,tropical=falso,queda=falso,abismo=falso,suave=falso,media=falso,forte=falso,turbular=falso
 
    enquanto(opcao != 0){
    escreva("\n----Parque Aquático----" )
@@ -57,9 +57,50 @@ programa {
 	  				pare}
 			}
 		caso 2:
+			enquanto(ondas != 0){
+				escreva("\n 1- Onda suave"                )
+				escreva("\n 2- Onda média"                )
+				escreva("\n 3- Onda forte"                )
+				escreva("\n 4- Onda turbular"             )
+				escreva("\n 0- voltar ao menu principal"  )
+				escreva("\n Escolha uma opção: "          )
+				leia(ondas)
 
-		caso 3:
-
+				escolha(ondas){
+					caso 1: 
+					escreva("Você escolheu Onda Suave!")
+  			  		escreva("Tempo de espera:10 min\n")
+  			  		escreva("Custo:R$8\n")
+  			  		conta=conta+8
+  			  		suave=verdadeiro
+  			  		pare
+  			  		caso 2:
+  			  		escreva("Você escolheu Onda Média!")
+  			  		escreva("Tempo de espera:13 min\n")
+  			  		escreva("Custo:R12\n")
+  			  		conta=conta+12
+  			  		media=verdadeiro
+  			  		pare
+  			  		caso 3:
+  			  		escreva("Você escolheu Onda Forte!")
+  			  		escreva("Tempo de espera:15 min\n")
+  			  		escreva("Custo:R$15\n")
+  			  		conta=conta+15
+  			  		forte=verdadeiro
+  			  		pare
+  			  		caso 4: 
+  			  		escreva("Você escolheu Onda Turbular!")
+  			  		escreva("Tempo de espera:18 min\n")
+  			  		escreva("Custo:R$19\n")
+  			  		conta=conta+19
+  			  		turbular=verdadeiro
+  			  		pare
+  			  		caso contrario: 
+  			  		escreva("Opção inválida")
+				}
+					}
+					
+				}
     }
 			escreva("---Intens Comprados---\n")
 				se(Onda == verdadeiro){
@@ -70,18 +111,27 @@ programa {
 					escreva("Queda Radical / Custo:R$15\n")}
 				se(abismo == verdadeiro){
 					escreva("Abismo Extremo / Custo:R$19\n")}
+
+					se(suave == verdadeiro){
+					escreva("Onda Suave / Custo:R$8\n")}
+				se(media== verdadeiro){
+					escreva("Onda Média / Custo:R$12\n")}
+				se(forte == verdadeiro){
+					escreva("Onda Forte / Custo:R$15\n")}
+				se(turbular== verdadeiro){
+					escreva("Onda Turbular / Custo:R$19\n")}
 				escreva("O total da compra é de:R$ ",conta,"\n")
     
 		  }	
   }
-}
+
 
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1756; 
+ * @POSICAO-CURSOR = 3671; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
